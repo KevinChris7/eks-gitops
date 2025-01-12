@@ -1,0 +1,16 @@
+adminPassword: "admin"
+
+# Enable Kubernetes monitoring dashboards
+datasources:
+  dashboards:
+    default:
+      kube-state-metrics: {}
+      prometheus: {}
+
+service:
+  type: LoadBalancer
+
+persistence:
+  enabled: true
+  size: 5Gi
+  storageClass: "gp2"
